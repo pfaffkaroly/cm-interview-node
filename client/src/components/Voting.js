@@ -21,7 +21,7 @@ export default function Voting() {
     pokemonDataPromise.then(data => setPokemonState(data));
   }
 
-  useEffect(() => refreshPokemons, []);
+  useEffect(() => refreshPokemons(), []);
 
   const playAudio = (name) => {
     document.getElementById(`${name}-audio`).play()
